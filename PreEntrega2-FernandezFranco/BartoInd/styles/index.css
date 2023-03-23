@@ -1,0 +1,128 @@
+
+body{
+        display: grid;
+        grid-template-areas: 
+        "header header header"
+        "contenido contenido contenido"
+        "contenido contenido contenido"
+        "contenido contenido contenido"
+        "footer footer footer";
+        grid-template-columns: 1fr 6fr 1fr;}
+    
+    
+header{
+        grid-area: header;
+        display: grid;
+        grid-template-areas: 
+        "logo navbar"
+        "publicidad publicidad";
+        width: 100%;}
+    .logoBox {
+        grid-area: logo;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
+        margin: 2vh 2vh;
+    }
+    .publicidad {
+        grid-area: publicidad;
+    }
+    .publicidad h3{
+        position: absolute; 
+        text-align: center;}
+    .navegacion {
+            display: flex;
+            justify-content: center; 
+    }
+    .contenido{
+            grid-area: contenido;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 15px;
+            justify-items: center;
+            margin: 3vh 5vh;}
+    .imagen{
+            width: 100%;}
+    .descripcion{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1vh;}
+    .titulo{
+            width: 100%;
+            margin-bottom: 1vh; 
+            text-align: center;}
+    .tarjeta{
+            padding: 3vh; 
+            border: 1px solid black; 
+            border-radius: 1vh;
+            border-style: outset;
+            width: 75%;}
+    .tarjeta:hover{
+            border: 1px solid white;}
+    .tarjeta button:hover{
+        border: 1px solid white;}
+    
+        
+    footer{
+        grid-area: footer;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;}
+    footer p{
+        text-align: left;}
+    .titles{
+        padding-top: 10px;}
+    
+
+@media (max-width: 480px) {
+
+body {
+    display:block
+}
+header {
+    display: block;
+}
+.logoBox {justify-content: center;}
+.contenido {
+    display: block;
+}
+.tarjeta {
+    width: 100%;
+    margin: 3vh 0vh;
+}
+footer {
+    display: block;
+}
+footer p {text-align: center;}
+}
+
+@media (min-width: 481px) AND (max-width: 1023px) {
+    body {
+        display: block;
+    }
+    header {
+        display: block;
+    }
+    .logoBox {
+        justify-content: center;
+    }
+    .navegacion {
+        display: flex;
+        justify-content: center;
+    }
+.contenido {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+    .tarjeta {
+        width: 100%;
+        margin: 3vh 0vh;
+    }
+    footer {
+        display: block;
+    }
+    footer p {text-align: center;}
+}

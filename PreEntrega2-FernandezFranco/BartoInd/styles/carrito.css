@@ -1,0 +1,126 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+      " . carrito . "
+      " . carrito . "
+    "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;}
+
+header{
+        grid-area: header;
+        display: grid;
+        grid-template-areas: 
+        "logo navbar"
+        "publicidad publicidad";
+        width: 100%;}
+    .logoBox {
+        grid-area: logo;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
+        margin: 2vh 2vh;
+    }
+    .publicidad {
+        grid-area: publicidad;
+    }
+    .publicidad h3{
+        position: absolute; 
+        text-align: center;}
+    .navegacion {
+            display: flex;
+            justify-content: center; 
+    }
+    
+.carrito{
+    grid-area: carrito;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 5px;}
+.tituloCarrito{
+    width: 100%;
+    text-align: center;
+    padding: 3vh;
+    text-decoration: underline;}
+.detalle{
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "imagen . descripcion"
+    "imagen . precio";
+    width: 100vh;
+    padding: 5vh;
+    margin: 5vh;
+    background-color: rgb(255, 209, 3);
+    color: black;}
+.detalle:hover {
+    border-radius: 5vh;}
+.titulo {
+    grid-area: titulo;text-align: center;padding: 1vh;width:100%;}
+.imagen{
+    grid-area: imagen; padding: 2vh;}
+.descripcion{
+    grid-area: descripcion; padding: 2vh;text-align: center;}
+.precio {
+    grid-area: precio;padding: 2vh;text-align: center;margin-top: 5vh;}
+.botonFinalizar {
+    display: block;
+    width: 100%;
+    justify-content: center;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;}
+footer p {
+    text-align: left;}
+.titles {
+    padding-top: 10px;}
+
+
+@media (max-width: 480px) {
+
+        body {
+            display:block
+        }
+        header {
+            display: block;
+        }
+        .logoBox {justify-content: center;}
+        .contenido {
+            display: block;
+        }
+        .detalle {background-color: cadetblue;}
+        .tarjeta {
+            width: 100%;
+            margin: 3vh 0vh;
+        }
+        footer {
+            display: block;
+        }
+        footer p {text-align: center;}
+        }
+
+@media (min-width: 481px) AND (max-width: 1023px) {
+            body {
+                display: block;
+            }
+            header {
+                display: block;
+            }
+            .logoBox {
+                justify-content: center;
+            }
+            .navegacion {
+                display: flex;
+                justify-content: center;
+            }
+            footer {
+                display: block;
+            }
+            footer p {text-align: center;}
+        }
