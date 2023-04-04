@@ -1,0 +1,112 @@
+$font-family_1: 'Roboto Condensed', sans-serif;
+
+body {
+	display: grid;
+	grid-template-areas: "header header header header" ". caja caja . "". caja caja . ""footer footer footer footer";
+	grid-template-columns: 1fr 6fr 1fr;
+}
+header {
+	font-family: $font-family_1;
+	grid-area: header;
+	display: grid;
+	grid-template-areas: "logo navbar" "publicidad publicidad";
+	width: 100%;
+    .logoBox {
+        grid-area: logo;
+        display: flex;
+        flex-wrap: wrap;
+		padding: 2vh;
+    }
+    .publicidad {
+        grid-area: publicidad;
+        .marca {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            text-decoration: underline;
+        }
+    }
+	.navegacion {
+		display: flex;
+		justify-content: center;
+	}}
+.caja {
+	grid-area: caja;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.ubicacion {
+	padding: 5vh;
+}
+.texto {
+	padding: 5vh;
+}
+footer {
+	grid-area: footer;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+	p {
+		text-align: left;
+	}
+}
+.titles {
+	padding-top: 10px;
+}
+
+@media (max-width: 578px) {
+	body {
+		display: block;
+	}
+	header {
+		display: block;
+	}
+	.logoBox {
+		justify-content: center;
+	}
+	.caja {
+		width: 100%;
+		align-items: center;
+		text-align: center;
+	}
+
+	footer {
+		display: block;
+		p {
+			text-align: center;
+		}
+	}}
+
+
+
+@media (min-width: 579px) AND (max-width: 1023px) {
+	body {
+		display: block;
+	}
+	header {
+		display: block;
+	}
+	.logoBox {
+		justify-content: center;
+	}
+	.navegacion {
+		display: flex;
+		justify-content: center;
+	}
+	.caja {
+		width: 100%;
+		align-items: center;
+		text-align: center;
+	}
+
+	footer {
+		display: block;
+		p {
+			text-align: center;
+		}
+	}
+}
