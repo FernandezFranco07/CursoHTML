@@ -1,0 +1,109 @@
+body {
+  display: grid;
+  grid-template-areas: "header header header" " caja caja caja " "footer footer footer";
+  grid-template-columns: 1fr 6fr 1fr;
+}
+
+header {
+  font-family: "Roboto Condensed", sans-serif;
+  grid-area: header;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+header .logoBox {
+  padding: 2vh;
+}
+header .publicidad {
+  display: block;
+  width: 100%;
+}
+header .publicidad .marca {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+}
+
+.caja {
+  grid-area: caja;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: "Roboto Condensed", sans-serif;
+  height: 70vh;
+  width: 100%;
+}
+.caja .ubicacion {
+  padding: 2vh;
+}
+.caja .texto {
+  padding: 5vh;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+footer p {
+  text-align: left;
+}
+
+.titles {
+  padding-top: 10px;
+}
+
+@media (max-width: 578px) {
+  body {
+    display: block;
+  }
+  header {
+    display: block;
+  }
+  .logoBox {
+    text-align: center;
+  }
+  .caja {
+    height: -moz-max-content;
+    height: max-content;
+    text-align: center;
+  }
+  footer {
+    display: block;
+  }
+  footer p {
+    text-align: center;
+  }
+}
+@media (min-width: 579px) and (max-width: 1023px) {
+  body {
+    display: block;
+  }
+  header {
+    display: block;
+  }
+  .logoBox {
+    text-align: center;
+  }
+  .navegacion {
+    display: flex;
+    justify-content: center;
+  }
+  .caja {
+    padding: 0;
+  }
+  footer {
+    display: block;
+  }
+  footer p {
+    text-align: center;
+  }
+}/*# sourceMappingURL=ubicacion.css.map */

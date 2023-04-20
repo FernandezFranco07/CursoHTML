@@ -1,0 +1,164 @@
+body {
+  display: grid;
+  grid-template-areas: "header header header " ". formularios ." ". formularios ." "footer footer footer ";
+  grid-template-columns: 1fr 6fr 1fr;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+header {
+  font-family: "Roboto Condensed", sans-serif;
+  grid-area: header;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+header .logoBox {
+  padding: 2vh;
+}
+header .publicidad {
+  display: block;
+  width: 100%;
+}
+header .publicidad .marca {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.formularios {
+  font-family: "Roboto Condensed", sans-serif;
+  grid-area: formularios;
+}
+
+.ingreso {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 3vh;
+  text-align: center;
+  margin: 3vh;
+}
+
+.info {
+  margin: 3vh;
+}
+
+#enviar {
+  float: right;
+  border: 1px solid white;
+  padding: 2px;
+}
+
+footer {
+  font-family: "Roboto Condensed", sans-serif;
+  grid-area: footer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+footer p {
+  text-align: left;
+}
+
+.titles {
+  padding-top: 10px;
+}
+
+@media (max-width: 578px) {
+  body {
+    display: block;
+  }
+  header {
+    display: block;
+  }
+  .logoBox {
+    text-align: center;
+  }
+  .formularios {
+    display: block;
+  }
+  footer {
+    display: block;
+  }
+  footer p {
+    text-align: center;
+  }
+}
+@media (min-width: 579px) and (max-width: 1023px) {
+  body {
+    display: block;
+  }
+  header {
+    display: block;
+  }
+  .logoBox {
+    justify-content: center;
+  }
+  .navegacion {
+    display: flex;
+    justify-content: center;
+  }
+  footer {
+    display: block;
+  }
+  footer p {
+    text-align: center;
+  }
+}
+.detalle {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 20px;
+  background: white;
+  font-size: 18px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 1s;
+}
+.detalle:after, .detalle:before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 0px solid #fff;
+  transition: all 1s;
+}
+.detalle:after {
+  top: -1px;
+  left: -1px;
+  border-top: 5px solid rgb(0, 51, 94);
+  border-left: 5px solid rgb(0, 51, 94);
+}
+.detalle:before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 5px solid rgb(0, 51, 94);
+  border-right: 5px solid rgb(0, 51, 94);
+}
+.detalle:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.detalle:hover:before, .detalle:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
+.tarjeta:hover {
+  border: 1px solid rgb(0, 51, 94);
+}
+
+.tarjeta button:hover {
+  font-weight: bold;
+}
+.tarjeta h3:hover {
+  font-weight: bold;
+}/*# sourceMappingURL=inicio.css.map */

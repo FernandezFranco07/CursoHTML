@@ -1,0 +1,116 @@
+$font-family_1: 'Roboto Condensed', sans-serif;
+
+body {
+	display: grid;
+	grid-template-areas: 
+	"header header header" 
+	" caja caja caja "
+	"footer footer footer";
+	grid-template-columns: 1fr 6fr 1fr;
+}
+header {
+	font-family: $font-family_1;
+	grid-area: header;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+    .logoBox {
+        padding: 2vh;
+    }
+    .publicidad { 
+		display: block;
+		width: 100%;
+        .marca {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            text-decoration: underline;
+        }
+    }
+
+}
+.caja {
+	grid-area: caja;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	font-family: $font-family_1;
+	height: 70vh;
+	width: 100%;
+	.ubicacion {
+		padding: 2vh;
+	}
+	.texto {
+		padding: 5vh;
+		font-family: $font-family_1;
+	}
+}
+
+
+footer {
+	grid-area: footer;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+	font-family: $font-family_1;
+	p {
+		text-align: left;
+	}
+}
+.titles {
+	padding-top: 10px;
+}
+
+@media (max-width: 578px) {
+	body {
+		display: block;
+	}
+	header {
+		display: block;
+	}
+	.logoBox {
+        text-align: center;
+	}
+	.caja {
+		height: max-content;
+		text-align: center;
+	}
+
+	footer {
+		display: block;
+		p {
+			text-align: center;
+		}
+	}}
+
+
+
+@media (min-width: 579px) AND (max-width: 1023px) {
+	body {
+		display: block;
+	}
+	header {
+		display: block;
+	}
+	.logoBox {
+        text-align: center;
+	}
+	.navegacion {
+		display: flex;
+		justify-content: center;
+	}
+	.caja {
+        padding: 0;
+	}
+
+	footer {
+		display: block;
+		p {
+			text-align: center;
+		}
+	}
+}
